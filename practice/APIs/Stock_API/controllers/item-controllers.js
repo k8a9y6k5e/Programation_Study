@@ -2,7 +2,7 @@ const itemsMap = new Map();
 
 function itemAdd(req, res, next){
     try{
-        _itemSave(Object.entries(req.body));
+        _itemSave(Object.entries(req.validatedBody));
 
         res.status(201).json({work : true, data : [...itemsMap.keys()]})
     }
@@ -35,4 +35,21 @@ function _nullMapVerifier(){
     else return false;
 }
 
-module.exports = {itemAdd, showAll};
+function searchItem(req, res ,next){
+    try{
+        const result = _search(req.validatedQuery.search);
+        res.status(201).json({work:true, data : result});
+    }
+    catch(err){
+        next(err);
+    }
+}
+
+function _search(valueToFind){
+    if(itemsMap.has(valueToFind)){
+        return [valueToFind, itemsMap.get(valueToFind)];
+    }
+    else throw new Error('value not exist');
+}
+
+module.exports = {itemAdd, showAll, searchItem};

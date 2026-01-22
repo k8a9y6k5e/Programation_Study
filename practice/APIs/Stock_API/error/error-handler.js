@@ -11,6 +11,8 @@ function _statusCodeIdentifier(err){
         case "item already exist":
             return 409;
         case "keys can't be empty":
+        case "value not exist":
+        case "value to search can't be empty":
             return 400;
         case "no items stored yet":
             return 200;

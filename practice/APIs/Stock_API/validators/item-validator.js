@@ -1,10 +1,10 @@
 const {z} = require('zod');
 
 
-function validatorMiddleware(req, res, next){
+function itemValidator(req, res, next){
     try{
-        _keyValidator(Object.keys(req.body));
-        _valuesValidator(req.body);
+        req.validatedBody = _itemValidator(req.body);
+
         next();
     }
     catch(err){
@@ -12,28 +12,40 @@ function validatorMiddleware(req, res, next){
     }
 }
 
-const _valuesSchematic = z.object({
+const _itemSchematic = z.record(z.string(), z.object({
     code: z.coerce.string().length(6),
     quantity: z.coerce.number().nonnegative(),
     price : z.coerce.number().nonnegative()
-});
+}));
 
-function _valuesValidator(values){
-    for(let item of Object.keys(values)){
-        let result = _valuesSchematic.safeParse(values[item])
-        if(!result.success) {
-            const fieldName = result.error.issues[0].path.join(', ');
-            throw new Error(`invalid format value in ${fieldName}`);
-        };
+function _itemValidator(requestBody){
+    let result = _itemSchematic.safeParse(requestBody);
+
+    if(!result.success) {
+        const fieldName = result.error.issues[0].path.join(', ');
+        throw new Error(`ìnvalid format value in ${fieldName}`);
+    }
+
+    return result.data;
+}
+
+const _searchSchematic = z.object({
+    search : z.string().trim().min(1)
+})
+
+function searchValidator(req,res,next){
+    try{
+        const result = _searchSchematic.safeParse(req.query);
+
+        if(!result.success) throw new Error("value to search can't be empty");
+        
+        req.validatedQuery = result.data;
+
+        next();
+    }
+    catch (err){
+        next(err);
     }
 }
 
-const _keySchematic = z.array(z.string().trim().min(1, {message : "keys can't be empty"}));
-
-function _keyValidator(keys){
-    const result = _keySchematic.safeParse(keys);
-
-    if(!result.success) throw new Error("keys can't be empty");
-}
-
-module.exports = validatorMiddleware;
+module.exports = {itemValidator, searchValidator};
