@@ -106,11 +106,14 @@ Files *applying commands and new features* to learn how each one works and how t
 
 #### *functions*
 
+- [x] auto-increment.sql - Study about the form to auto increment primary keys;
 - [x] check.sql - Study about the constraint CHECK to limit values;
 - [x] current_commands.sql - Study about the commands "CURRENT_TIME()" e "CURRENT_DATE()";
 - [x] database_creation.sql - Study about how create a database and some basic functions;
 - [x] default.sql - Study about the constraint DEFAULT, to add default values to columns;
+- [x] foreign-key.sql - Study about the use of foreign keys to connect tables;
 - [x] not_null.sql - Study about the constraint NOT NULL, to block null values;
+- [x] primary-key.sql - Study about the application of a PRIMARY KEY inside tables;
 - [x] rows_insertion.sql - Study about how add rows and values inside a table;
 - [x] selecting_data.sql - Study about how get a value or/and data from a table;
 - [x] table_creation.sql - Study about the creation and basic use of tables;

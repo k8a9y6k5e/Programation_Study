@@ -6,7 +6,7 @@ USE studyDB;
 CREATE TABLE users (
     users_id SMALLINT UNIQUE,
     users_name VARCHAR(50),
-    users_age TINYINT
+    users_age TINYINT,
     CONSTRAINT law_age CHECK (users_age >= 18)
 );
 
