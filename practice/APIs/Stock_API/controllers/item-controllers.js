@@ -67,4 +67,4 @@ function _excludeItem(item){
     else throw new Error('item not exist');
 }
 
-module.exports = {itemAdd, showAll, searchItem};
+module.exports = {itemAdd, showAll, searchItem, itemDelete};
