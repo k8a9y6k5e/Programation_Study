@@ -16,6 +16,8 @@ function _statusCodeIdentifier(err){
             return 400;
         case "no items stored yet":
             return 200;
+        case "item not exist":
+            return 404;
         default:
             switch(true){
                 case err.message.includes('code'):
