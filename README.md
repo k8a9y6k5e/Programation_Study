@@ -71,6 +71,8 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] class_basic.js - Study about the basic syntax of class;
 - [x] class_inheritance.js - Study about the inheritance of classes;
 - [x] extending-buildIn-classes.js - Study about the inheritance of build-in classes;
+- [x] instanceOf.js - Study about the use of instance of command;
+- [x] mixins.js - ;
 - [x] private-properties.js - Study about the sintax of protect, readOnly and private properties;
 - [x] static-properties-methods.js - Study about the keyword 'static' and your function;
 

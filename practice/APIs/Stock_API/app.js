@@ -17,6 +17,8 @@ app.listen(3001);
 little roadmap:
 *exclude items;
 *update items;
+**update quantity;
+**update price;
 *log history;
 *alert if the stock is low;
 */
