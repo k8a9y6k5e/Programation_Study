@@ -78,7 +78,7 @@ Files *applying commands and new features* to learn how each one works and how t
 
 #### *error-handling*
 
-- [ ] custom_errors.js - The use and creations of custom error to use in error handling;
+- [x] custom_errors.js - The use and creations of custom error to use in error handling;
 - [x] error_hancling.js - Application of try...catch to support errors;
 
 #### *object-basic*
