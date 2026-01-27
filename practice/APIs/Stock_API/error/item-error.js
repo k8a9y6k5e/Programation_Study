@@ -6,4 +6,10 @@ class ItemAlreadyExistError extends ItemError{
     }
 }
 
-module.exports = {ItemAlreadyExistError};
+class NotExistError extends ItemError{
+    constructor(){
+        super("value not exist", 400);
+    }
+}
+
+module.exports = {ItemAlreadyExistError, NotExistError};

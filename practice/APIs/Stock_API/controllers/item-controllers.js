@@ -1,4 +1,4 @@
-const {ItemAlreadyExistError} = require('./../error/item-error');
+const {ItemAlreadyExistError, NotExistError} = require('./../error/item-error');
 
 const itemsMap = new Map();
 
@@ -51,7 +51,7 @@ function _search(valueToFind){
     if(itemsMap.has(valueToFind)){
         return [valueToFind, itemsMap.get(valueToFind)];
     }
-    else throw new Error('value not exist');
+    else throw new NotExistError();
 }
 
 function itemDelete(req, res, next){
