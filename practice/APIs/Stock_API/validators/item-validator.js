@@ -1,5 +1,5 @@
 const {z} = require('zod');
-const {NullSearchValueError, NullDeleteValueError} = require('./../error/item-error');
+const {NullSearchValueError, NullDeleteValueError, InvalidValueFormatError} = require('./../error/item-error');
 
 
 function itemValidator(req, res, next){
@@ -24,7 +24,7 @@ function _itemValidator(requestBody){
 
     if(!result.success) {
         const fieldName = result.error.issues[0].path.join(', ');
-        throw new Error(`ìnvalid format value in ${fieldName}`);
+        throw new InvalidValueFormatError(fieldName);
     }
 
     return result.data;

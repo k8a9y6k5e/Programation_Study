@@ -4,19 +4,6 @@ function errorHandler(err, req, res, next){
     res.status(err.statusCode).json({work : false, error : err.message})
 }
 
-function _statusCodeIdentifier(err){
-    switch (err.message){
-        default:
-            switch(true){
-                case err.message.includes('code'):
-                case err.message.includes('quantity'):
-                case err.message.includes('price'):
-                    return 400;
-            }
-            return 500;
-    }
-}
-
 const _statusCodeSchematic = z.number();
 
 class ItemError extends Error{
@@ -33,20 +20,12 @@ class ItemError extends Error{
     }
 
     set statusCode(value){
-        try{
-            const result = _statusCodeSchematic.safeParse(value);
-            
-            if(!result.success) throw new Error();//server error
-            
-            this._statusCode = value;
-        }  
-        catch (err){
-            //add a server error
-        }
+        const result = _statusCodeSchematic.safeParse(value);
+        
+        if(!result.success) throw new Error();//server error
+        
+        this._statusCode = value;
     }
 }
-
-//create server errors
-//create validator errors
 
 module.exports = {errorHandler, ItemError};

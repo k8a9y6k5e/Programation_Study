@@ -36,6 +36,11 @@ class ItemNotExistError extends ItemError{
     }
 }
 
+class InvalidValueFormatError extends ItemError{
+    constructor(invalidValues){
+        super(`ìnvalid format value in ${invalidValues}`, 400);
+    }
+}
+
 module.exports = {ItemAlreadyExistError, NotExistError, NullSearchValueError,
-    NullDeleteValueError, NoItemStoredError, ItemNotExistError,
-};
+    NullDeleteValueError, NoItemStoredError, ItemNotExistError, InvalidValueFormatError};
