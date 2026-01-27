@@ -6,9 +6,9 @@ class ItemAlreadyExistError extends ItemError{
     }
 }
 
-class NotExistError extends ItemError{
+class SearchItemNotExistError extends ItemError{
     constructor(){
-        super("value not exist", 400);
+        super("item not exist", 400);
     }
 }
 
@@ -18,7 +18,7 @@ class NullSearchValueError extends ItemError{
     }
 }
 
-class NullDeleteValueError extends ItemError{
+class DeleteValueError extends ItemError{
     constructor(){
         super("value to delete can't be null", 400);
     }
@@ -30,7 +30,7 @@ class NoItemStoredError extends ItemError{
     }
 }
 
-class ItemNotExistError extends ItemError{
+class DeleteItemNotExistError extends ItemError{
     constructor(){
         super("item not exist" , 409);
     }
@@ -42,5 +42,5 @@ class InvalidValueFormatError extends ItemError{
     }
 }
 
-module.exports = {ItemAlreadyExistError, NotExistError, NullSearchValueError,
-    NullDeleteValueError, NoItemStoredError, ItemNotExistError, InvalidValueFormatError};
+module.exports = {ItemAlreadyExistError, SearchItemNotExistError, NullSearchValueError,
+    DeleteValueError, NoItemStoredError, DeleteItemNotExistError, InvalidValueFormatError};

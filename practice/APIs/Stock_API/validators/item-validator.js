@@ -1,5 +1,5 @@
 const {z} = require('zod');
-const {NullSearchValueError, NullDeleteValueError, InvalidValueFormatError} = require('./../error/item-error');
+const {NullSearchValueError, DeleteValueError, InvalidValueFormatError} = require('./../error/item-error');
 
 
 function itemValidator(req, res, next){
@@ -57,7 +57,7 @@ function deleteValidator(req, res, next){
     try{
         const result = _deleteSchematic.safeParse(req.params);
 
-        if(!result.success) throw new NullDeleteValueError();
+        if(!result.success) throw new DeleteValueError();
 
         req.validatedParams = result.data;
 

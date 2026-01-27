@@ -1,4 +1,4 @@
-const {ItemAlreadyExistError, NotExistError, ItemNotExistError, NoItemStoredError} = require('./../error/item-error');
+const {ItemAlreadyExistError, SearchItemNotExistError, DeleteItemNotExistError, NoItemStoredError} = require('./../error/item-error');
 
 const itemsMap = new Map();
 
@@ -51,7 +51,7 @@ function _search(valueToFind){
     if(itemsMap.has(valueToFind)){
         return [valueToFind, itemsMap.get(valueToFind)];
     }
-    else throw new NotExistError();
+    else throw new SearchItemNotExistError();
 }
 
 function itemDelete(req, res, next){
@@ -66,7 +66,7 @@ function itemDelete(req, res, next){
 
 function _excludeItem(item){
     if(itemsMap.has(item)) itemsMap.delete(item);
-    else throw new ItemNotExistError();
+    else throw new DeleteItemNotExistError();
 }
 
 module.exports = {itemAdd, showAll, searchItem, itemDelete};
