@@ -18,4 +18,12 @@ class NullSearchValueError extends ItemError{
     }
 }
 
-module.exports = {ItemAlreadyExistError, NotExistError, NullSearchValueError};
+class NullDeleteValueError extends ItemError{
+    constructor(){
+        super("value to delete can't be null", 400);
+    }
+}
+
+module.exports = {ItemAlreadyExistError, NotExistError, NullSearchValueError,
+    NullDeleteValueError
+};

@@ -6,8 +6,6 @@ function errorHandler(err, req, res, next){
 
 function _statusCodeIdentifier(err){
     switch (err.message){
-        case "value to delete can't be null":
-            return 400;
         case "no items stored yet":
             return 200;
         case "item not exist":

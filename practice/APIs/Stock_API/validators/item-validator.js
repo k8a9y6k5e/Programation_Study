@@ -1,5 +1,5 @@
 const {z} = require('zod');
-const {NullSearchValueError} = require('./../error/item-error');
+const {NullSearchValueError, NullDeleteValueError} = require('./../error/item-error');
 
 
 function itemValidator(req, res, next){
@@ -57,7 +57,7 @@ function deleteValidator(req, res, next){
     try{
         const result = _deleteSchematic.safeParse(req.params);
 
-        if(!result.success) throw new Error("value to delete can't be null");
+        if(!result.success) throw new NullDeleteValueError();
 
         req.validatedParams = result.data;
 
