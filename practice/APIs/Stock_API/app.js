@@ -18,7 +18,7 @@ little roadmap:
 *update items;
 **update quantity - patch;
 **update price - patch;
-**both - put;
-*log history;
-*show history;
+*history:
+**log;
+**show;
 */
