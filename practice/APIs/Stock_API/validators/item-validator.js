@@ -50,13 +50,13 @@ function searchValidator(req,res,next){
     }
 }
 
-const _deleteSchematic = z.object({
+const _paramSchematic = z.object({
     item : z.string().trim().min(1)
 });
 
 function deleteValidator(req, res, next){
     try{
-        const result = _deleteSchematic.safeParse(req.params);
+        const result = _paramSchematic.safeParse(req.params);
 
         if(!result.success) throw new DeleteValueError();
 
@@ -69,18 +69,41 @@ function deleteValidator(req, res, next){
     }
 }
 
-const _updatePutSchematic = z.object({
+const _updateSchematic = z.object({
     quantity : z.number().nonnegative(),
     price : z.number().nonnegative()
 });
 
 function updatePutValidator(req,res,next){
     try{
-        const result = _updatePutSchematic.safeParse(req.body);
+        const resultBody = _updateSchematic.safeParse(req.body);
 
-        if(!result.success) throw new UpdatePutValidatorError();
+        const resultParams = _paramSchematic.safeParse(req.params);
 
-        req.validatedBody = result.data;
+        if(!resultBody.success && !resultParams.success) throw new UpdatePutValidatorError();
+
+        req.validatedBody = resultBody.data;
+
+        req.validatedParams = resultParams.data;
+
+        next();
+    }
+    catch(err){
+        next(err);
+    }
+}
+
+function updatePatchvalidator(req,res,next){
+    try{
+        const resultBody = _updateSchematic.safeParse(req.body);
+
+        const resultParams = _paramSchematic.safeParse(req.params);
+
+        if(!resultBody.success && !resultParams.success) //add error
+
+        req.validatedBody = resultBody.data;
+
+        req.validatedParams = resultParams.data;
 
         next();
     }

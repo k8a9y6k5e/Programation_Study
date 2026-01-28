@@ -72,7 +72,7 @@ function _excludeItem(item){
 
 function completeItemUpdate(req, res, next){
     try{
-        const result = _update(req.body, req.params.toChange);
+        const result = _completeUpdate(req.validatedBody, req.validatedParams.toChange);
         
         res.status(201).json({work:true, data:result});
     }
@@ -95,7 +95,7 @@ function _completeUpdate(toUpdate, toChange){
 
 function itemUpdate(req, res, next){
     try{
-        const result = _onceValueUpdate(req.body, req.params.toChange);
+        const result = _onceValueUpdate(req.validatedBody, req.validatedParams.toChange);
 
         res.status(201).json({work:true,data:result});
     }  

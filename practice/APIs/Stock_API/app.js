@@ -15,9 +15,6 @@ app.listen(3001);
 
 /*
 little roadmap:
-*update items;
-**update quantity - patch;
-**update price - patch;
 *history:
 **log;
 **show;
