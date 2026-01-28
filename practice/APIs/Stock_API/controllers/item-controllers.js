@@ -112,6 +112,7 @@ function _onceValueUpdate(toUpdate, toChange){
 
         return {toChange : itemsMap.get(toChange)};
     }
+    else throw new UpdateError(toChange);
 }
 
 module.exports = {itemAdd, showAll, searchItem, itemDelete, completeItemUpdate, itemUpdate};

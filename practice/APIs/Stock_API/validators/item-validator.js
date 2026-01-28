@@ -1,6 +1,6 @@
 const {z} = require('zod');
 const {NullSearchValueError, DeleteValueError, InvalidValueFormatError,
-    UpdatePutValidatorError} = require('./../error/item-error');
+    UpdatePutValidatorError, UpdatePatchvalidatorError} = require('./../error/item-error');
 
 
 function itemValidator(req, res, next){
@@ -93,13 +93,13 @@ function updatePutValidator(req,res,next){
     }
 }
 
-function updatePatchvalidator(req,res,next){
+function updatePatchValidator(req,res,next){
     try{
         const resultBody = _updateSchematic.safeParse(req.body);
 
         const resultParams = _paramSchematic.safeParse(req.params);
 
-        if(!resultBody.success && !resultParams.success) //add error
+        if(!resultBody.success || !resultParams.success) throw new UpdatePatchvalidatorError();
 
         req.validatedBody = resultBody.data;
 
@@ -112,4 +112,4 @@ function updatePatchvalidator(req,res,next){
     }
 }
 
-module.exports = {itemValidator, searchValidator, deleteValidator, updatePutValidator};
+module.exports = {itemValidator, searchValidator, deleteValidator, updatePutValidator, updatePatchValidator};
