@@ -96,6 +96,7 @@ Files *applying commands and new features* to learn how each one works and how t
 #### *others*
 
 - [x] APIuse.js - Use and application of APIs, and forms to improve APIs(like zod);
+- [x] jwt.js - Use of JWT to autentication in an API;
 - [x] process.js - Application and study about the internal module of process, using some main commands;
 
 #### *prototypes-inheritance*
