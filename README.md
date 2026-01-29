@@ -131,7 +131,7 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] unions.sql - Study about the use of the UNION to join the results of multiple SELECTs;
 - [x] unique.sql - Study about constraint UNIQUE, to block repeat values;
 - [x] update_delete.sql - Study about how delete and updates values inside a row;
-- [x] views.sql - ;
+- [x] views.sql - Study about the virtual table VIEW;
 - [x] wild-cards.sql - Study about the specials characters "%" and "_" in a string and they use;
 
 #### *practice*
