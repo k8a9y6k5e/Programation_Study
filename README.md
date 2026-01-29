@@ -116,6 +116,7 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] default.sql - Study about the constraint DEFAULT, to add default values to columns;
 - [x] foreign-key.sql - Study about the use of foreign keys to connect tables;
 - [x] functions.sql - Study about a few functions in sql;
+- [x] indexes.sql - ;
 - [x] joins.sql - Study about the forms to join two tables;
 - [x] limit.sql - Study about the use of the clause limit;
 - [x] logical-operators.sql - Study about the use of logical operators to check more than one condition;
@@ -124,10 +125,13 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] primary-key.sql - Study about the application of a PRIMARY KEY inside tables;
 - [x] rows_insertion.sql - Study about how add rows and values inside a table;
 - [x] selecting_data.sql - Study about how get a value or/and data from a table;
+- [x] self-joins.sql - ;
 - [x] table_creation.sql - Study about the creation and basic use of tables;
 - [x] transactions.sql - Study about the commands of "AUTOCOMMIT", "COMMIT" and "ROLLBACK";
+- [x] unions.sql - Study about the use of the UNION to join the results of multiple SELECTs;
 - [x] unique.sql - Study about constraint UNIQUE, to block repeat values;
 - [x] update_delete.sql - Study about how delete and updates values inside a row;
+- [x] views.sql - ;
 - [x] wild-cards.sql - Study about the specials characters "%" and "_" in a string and they use;
 
 #### *practice*
