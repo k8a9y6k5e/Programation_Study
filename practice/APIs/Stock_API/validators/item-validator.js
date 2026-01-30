@@ -75,7 +75,7 @@ const _updatePutSchematic = z.object({
 });
 
 const _paramUpdateSchematic = z.object({
-    toChange : z.coerce.string().trim().min(1)
+    item : z.coerce.string().trim().min(1)
 });
 
 function updatePutValidator(req,res,next){

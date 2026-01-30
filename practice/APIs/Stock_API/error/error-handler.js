@@ -3,7 +3,7 @@ const {z} = require('zod');
 function errorHandler(err, req, res, next){
     console.log(err.stack);
 
-    res.status(err.statusCode).json({work : false, error : err.message})
+    res.status(err.statusCode || 500).json({work : false, error : err.message})
 }
 
 const _statusCodeSchematic = z.number();
@@ -15,7 +15,7 @@ class ItemError extends Error{
         this.name = this.constructor.name;
     }
 
-    _statusCode = 500;
+    _statusCode = undefined;
 
     get statusCode(){
         return this._statusCode;
