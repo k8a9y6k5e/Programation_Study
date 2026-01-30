@@ -66,6 +66,13 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] rest_spread.js - The use of "..." in functions, either in parameter(spread) or arguments(rest);
 - [x] scheduling.js - Start use of Asynchronous programming, use of "setTimeout" and "setInterval";
 
+#### *API*
+
+- [x] app-express.js - Study about the basic of express, like the use of app and the creation and use of basics functions of APIs;
+- [x] jwt.js - Use of JWT to autentication in an API;
+- [x] router-express.js - Study about the use of router in API;
+- [x] zod.js - Use of the library zod to validate values;
+
 #### *classes*
 
 - [x] class_basic.js - Study about the basic syntax of class;
@@ -95,8 +102,6 @@ Files *applying commands and new features* to learn how each one works and how t
 
 #### *others*
 
-- [x] APIuse.js - Use and application of APIs, and forms to improve APIs(like zod);
-- [x] jwt.js - Use of JWT to autentication in an API;
 - [x] process.js - Application and study about the internal module of process, using some main commands;
 
 #### *prototypes-inheritance*
