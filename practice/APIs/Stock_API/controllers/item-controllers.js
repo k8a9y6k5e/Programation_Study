@@ -70,9 +70,9 @@ function _excludeItem(item){
     else throw new DeleteItemNotExistError();
 }
 
-function updateItem(req, res, next){
+function completeItemUpdate(req, res, next){
     try{
-        const result = _update(req.body, req.params.toChange);
+        const result = _completeUpdate(req.validatedBody, req.validatedParams.toChange);
         
         res.status(201).json({work:true, data:result});
     }
@@ -81,7 +81,7 @@ function updateItem(req, res, next){
     }
 }
 
-function _update(toUpdate, toChange){
+function _completeUpdate(toUpdate, toChange){
     if(itemsMap.has(toChange))  {
         const itemsObj = itemsMap.get(toChange);
 
@@ -93,4 +93,26 @@ function _update(toUpdate, toChange){
     else throw new UpdateError(toChange);
 }
 
-module.exports = {itemAdd, showAll, searchItem, itemDelete, updateItem};
+function itemUpdate(req, res, next){
+    try{
+        const result = _onceValueUpdate(req.validatedBody, req.validatedParams.toChange);
+
+        res.status(201).json({work:true,data:result});
+    }  
+    catch(err){
+        next(err);
+    }
+}
+
+function _onceValueUpdate(toUpdate, toChange){
+    if(itemsMap.has(toChange)){
+        const itemsObj = itemsMap.get(toChange);
+
+        itemsObj[Object.keys(toUpdate)] = Object.values(toUpdate)[0];
+
+        return {toChange : itemsMap.get(toChange)};
+    }
+    else throw new UpdateError(toChange);
+}
+
+module.exports = {itemAdd, showAll, searchItem, itemDelete, completeItemUpdate, itemUpdate};
