@@ -8,7 +8,7 @@ function errorHandler(err, req, res, next){
 
 const _statusCodeSchematic = z.number();
 
-class ItemError extends Error{
+class BaseError extends Error{
     constructor(message,statusCode){
         super(message);
         this.statusCode = statusCode;
@@ -30,4 +30,4 @@ class ItemError extends Error{
     }
 }
 
-module.exports = {errorHandler, ItemError};
+module.exports = {errorHandler, BaseError};

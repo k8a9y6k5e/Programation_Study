@@ -1,3 +1,5 @@
+const ClearHistoryError = require('./../error/history-error');
+
 const movementSet = new Set();
 
 function logMovement(req, res, next){
@@ -35,7 +37,7 @@ function showHistory(req, res, next){
 }
 
 function _getHistory(){
-    if(movementSet.size == 0) throw new Error();
+    if(movementSet.size == 0) throw new ClearHistoryError();
 
     return movementSet.keys();
 }
