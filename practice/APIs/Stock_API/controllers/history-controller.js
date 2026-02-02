@@ -22,4 +22,22 @@ function _saveLog(movementObj){
     movementSet.add(movementObj);
 }
 
-module.exports = {logMovement};
+
+function showHistory(req, res, next){
+    try{
+        const result = _getHistory();
+
+        res.status(200).json({work:true, data:result});
+    }
+    catch(err){
+        next(err);
+    }
+}
+
+function _getHistory(){
+    if(movementSet.size == 0) throw new Error();
+
+    return movementSet.keys();
+}
+
+module.exports = {logMovement,showHistory};
