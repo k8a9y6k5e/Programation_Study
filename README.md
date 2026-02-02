@@ -75,6 +75,7 @@ Files *applying commands and new features* to learn how each one works and how t
 
 #### *asynchronous*
 
+- [x] async-await.js - Study about the syntax sugar of async and await;
 - [x] promise.js - Study about the use and function of promise;
 - [x] promise-methods.js - Study about a few methods to use in promises;
 
