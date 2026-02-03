@@ -1,3 +1,8 @@
+
+
+//to save the secret, because is a study program
+process.env.JWT_secret = "70b7c0a466a9e99e83e3c268a385cf39f7b0b724ac87c52f721d19b911df9950";
+
 /*
 ROADMAP:
 *Log In
@@ -9,7 +14,7 @@ ROADMAP:
 *use jwt to auth
 *use bcrypt in password
 *Sign Up
-**acount creation with:
+**account creation with:
 ***pasword
 ***email
 ***username
