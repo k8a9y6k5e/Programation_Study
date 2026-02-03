@@ -1,5 +1,6 @@
 const express = require('express');
 const signUpRouter = require('./router/sign-up-router');
+const {errorMiddleWare} = require('./error-handler/error-handler');
 
 const app = express();
 
@@ -7,6 +8,8 @@ const app = express();
 process.env.JWT_secret = "70b7c0a466a9e99e83e3c268a385cf39f7b0b724ac87c52f721d19b911df9950";
 
 app.use(express.json());
+
+app.use(errorMiddleWare);
 
 app.use('/signUp', signUpRouter);
 
@@ -23,10 +26,6 @@ ROADMAP:
 *use jwt to auth
 *use bcrypt in password
 *Sign Up
-**account creation with:
-***pasword
-***email
-***username
 **add a validator in each value
-**add an id in user
+**add an error handler
 */
