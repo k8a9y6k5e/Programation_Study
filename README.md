@@ -127,6 +127,7 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] default.sql - Study about the constraint DEFAULT, to add default values to columns;
 - [x] foreign-key.sql - Study about the use of foreign keys to connect tables;
 - [x] functions.sql - Study about a few functions in sql;
+- [x] group-by.sql - Study about the use of GROUP BY clause in queries to aggregate rows using another column as reference;
 - [x] indexes.sql - Study about the creation, use and function of the indexes column;
 - [x] joins.sql - Study about the forms to join two tables;
 - [x] limit.sql - Study about the use of the clause limit;
