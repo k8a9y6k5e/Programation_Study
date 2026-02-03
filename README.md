@@ -137,6 +137,7 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] rows_insertion.sql - Study about how add rows and values inside a table;
 - [x] selecting_data.sql - Study about how get a value or/and data from a table;
 - [x] self-joins.sql - Study about the use of INNER JOIN to a table join of itself;
+- [x] subqueries.sql - Study about the use of subqueries inside queries;
 - [x] table_creation.sql - Study about the creation and basic use of tables;
 - [x] transactions.sql - Study about the commands of "AUTOCOMMIT", "COMMIT" and "ROLLBACK";
 - [x] unions.sql - Study about the use of the UNION to join the results of multiple SELECTs;
