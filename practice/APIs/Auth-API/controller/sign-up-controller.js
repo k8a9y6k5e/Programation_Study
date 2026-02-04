@@ -22,7 +22,7 @@ function _tokenCreation(userInformations, id) {
     }
 
     const token = jwt.sign(payload, process.env.JWT_secret,{expiresIn : '7d'});
-    
+
     return token;
 }
 
