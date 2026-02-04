@@ -17,15 +17,7 @@ app.listen(3002);
 
 /*
 ROADMAP:
-*Log In
-**way to enter with
-***password
-***email
-**validator in each value enter
-**show informations
+*show informations
+*add a form to show the informations
 *use jwt to auth
-*use bcrypt in password
-*Sign Up
-**add a validator in each value
-**add an error handler
 */
