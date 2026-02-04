@@ -24,3 +24,5 @@ function signUpValidator(req,res,next){
         next(err);
     }
 }
+
+module.exports = signUpValidator;
