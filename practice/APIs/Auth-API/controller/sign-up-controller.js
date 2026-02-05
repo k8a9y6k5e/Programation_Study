@@ -26,4 +26,4 @@ function _tokenCreation(userInformations, id) {
     return token;
 }
 
-module.exports = {creationAccountController};
+module.exports = creationAccountController;

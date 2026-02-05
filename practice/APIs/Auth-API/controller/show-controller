@@ -1,0 +1,32 @@
+const jwt = require('jsonwebtoken');
+const {InvalidTokenError} = require('../error-handler/show-error');
+
+function showController(req,res,next){
+    try{
+        const result = _getInformations(req.token);
+
+        res.status(200).json({work:true, data:result});
+    }
+    catch (err){
+        next(err);
+    }
+}
+
+function _getInformations(token){
+    try{
+        const data = jwt.verify(token, process.env.JWT_secret);
+
+        const result = {
+            username : data.username,
+            email : data.email,
+            id : data.id
+        }
+
+        return result;
+    }
+    catch(err){
+        throw new InvalidTokenError();
+    }
+}
+
+module.exports = showController;
