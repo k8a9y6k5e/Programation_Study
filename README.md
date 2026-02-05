@@ -133,6 +133,7 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] limit.sql - Study about the use of the clause limit;
 - [x] logical-operators.sql - Study about the use of logical operators to check more than one condition;
 - [x] not_null.sql - Study about the constraint NOT NULL, to block null values;
+- [x] on-delete.js - Study about the clause of ON DELETE and it use in foreign key;
 - [x] order-by.sql - Study about the command ORDER BY, and how use it;
 - [x] primary-key.sql - Study about the application of a PRIMARY KEY inside tables;
 - [x] roll-up.sql - Study about the GROUP BY estension ROLL UP to show a grand total of the column;
