@@ -1,9 +1,9 @@
 const jwt = require('jsonwebtoken');
-const InvalidTokenError = require('../error-handler/show-error');
+const {InvalidTokenError} = require('../error-handler/show-error');
 
 function showController(req,res,next){
     try{
-        const result = _getInformations(req.headers.JWT_token);
+        const result = _getInformations(req.auth.token);
 
         res.status(200).json({work:true, data:result});
     }

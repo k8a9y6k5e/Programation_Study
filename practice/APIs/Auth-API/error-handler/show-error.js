@@ -4,4 +4,8 @@ class InvalidTokenError extends BaseError{
     constructor(){super('invalid token enter', 401);}
 }
 
-module.exports = InvalidTokenError;
+class InvalidTokenFormatError extends BaseError{
+    constructor(){super('invlid format of token', 400);}
+}
+
+module.exports = {InvalidTokenError, InvalidTokenFormatError};
