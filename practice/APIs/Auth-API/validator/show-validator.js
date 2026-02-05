@@ -9,7 +9,7 @@ function showHeaderValidator(req,res,next){
 
         if(!result.success) throw new InvalidTokenFormatError();
 
-        req.vauth.token = result.data;
+        req.token = result.data;
 
         next();
     }

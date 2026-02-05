@@ -3,7 +3,7 @@ const {InvalidTokenError} = require('../error-handler/show-error');
 
 function showController(req,res,next){
     try{
-        const result = _getInformations(req.auth.token);
+        const result = _getInformations(req.token);
 
         res.status(200).json({work:true, data:result});
     }
@@ -14,7 +14,15 @@ function showController(req,res,next){
 
 function _getInformations(token){
     try{
-        const result = jwt.verify(token, process.env.JWT_secret);
+        const data = jwt.verify(token, process.env.JWT_secret);
+
+        const result = {
+            username : data.username,
+            email : data.email,
+            id : data.id
+        }
+
+        return result;
     }
     catch(err){
         throw new InvalidTokenError();
