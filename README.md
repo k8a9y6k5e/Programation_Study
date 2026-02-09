@@ -99,6 +99,11 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] async-generators.js - Study about the use of asynchronous generators;
 - [x] generators.js - Study about the special functions called generator;
 
+#### *modules*
+
+- [x] export.mjs - Study about the use of modules to export values;
+- [x] import.mjs - Study about the use of modules to import values;
+
 #### *object-basic*
 
 - [x] chaining.js - Application of optional chaining, with the "?." symbol;
