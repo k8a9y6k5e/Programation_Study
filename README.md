@@ -70,6 +70,7 @@ Files *applying commands and new features* to learn how each one works and how t
 
 - [x] app-express.js - Study about the basic of express, like the use of app and the creation and use of basics functions of APIs;
 - [x] jwt.js - Use of JWT to autentication in an API;
+- [x] logs.js - Study about the logs and how to make it in an API, using morgan and winston, and the connection of both;
 - [x] router-express.js - Study about the use of router in API;
 - [x] zod.js - Use of the library zod to validate values;
 

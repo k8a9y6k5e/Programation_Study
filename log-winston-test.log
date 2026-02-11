@@ -1,0 +1,9 @@
+{"level":"http","message":"/winston"}
+{"level":"info","message":"winston log"}
+{"level":"http","message":"/winston"}
+{"level":"info","message":"winston log"}
+{"level":"http","message":"/winston"}
+{"level":"info","message":"winston log"}
+{"level":"http","message":"/winston"}
+{"level":"info","message":"winston log"}
+{"level":"http","message":"\u001b[0mGET /winstonMorgan \u001b[32m200\u001b[0m 2.109 ms - 14\u001b[0m\n"}
