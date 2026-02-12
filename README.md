@@ -1,11 +1,7 @@
 # **OVERVIEW**
 
 This repository is focused on showing my evolution and learning path, mainly through projects and application files to apply and test new features and concepts from my programming studies.
-
-## *CURRENT FOCUS*
-
-I'm focused on learning *JavaScript for backend development*, using node.js to work with APIs. After studying this language, I plain to learn TypeScript for a more focused understanding.
-As a secondary focus, *I'm learning MySQL and API usage with express*.
+In this repository, **the study is focused only in javascript and sql**;
 
 ---
 
@@ -45,7 +41,7 @@ Files where I try to *apply the things I learn in complete programs*.
 
 ## *study_application*
 
-Files *applying commands and new features* to learn how each one works and how to use them. Separated for javascript study and SQL study, which the SQL study is to use only for sql, not using with a javascript applycation.
+Files *applying commands and new features* to learn how each one works and how to use them. Separated for javascript study and SQL study, which the SQL study is to use only sql, not using with a javascript application.
 
 ### *Files - javascript*
 
@@ -102,6 +98,9 @@ Files *applying commands and new features* to learn how each one works and how t
 
 #### *modules*
 
+- [x] advanced-export.mjs - Study about the advanced use of export;
+- [x] advanced-import.mjs - Study about the advanced use of import;
+- [x] dynamic-imports.mjs - Study about the use of import in the middle of running code;
 - [x] export.mjs - Study about the use of modules to export values;
 - [x] import.mjs - Study about the use of modules to import values;
 
@@ -128,8 +127,6 @@ Files *applying commands and new features* to learn how each one works and how t
 
 
 ### *Files - SQL*
-
-#### *sql-base*
 
 - [x] auto-increment.sql - Study about the form to auto increment primary keys;
 - [x] check.sql - Study about the constraint CHECK to limit values;
@@ -161,10 +158,6 @@ Files *applying commands and new features* to learn how each one works and how t
 - [x] update_delete.sql - Study about how delete and updates values inside a row;
 - [x] views.sql - Study about the virtual table VIEW;
 - [x] wild-cards.sql - Study about the specials characters "%" and "_" in a string and they use;
-
-#### *practice*
-
-##### no one yet
 
 ---
 

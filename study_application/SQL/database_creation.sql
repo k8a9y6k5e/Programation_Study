@@ -13,9 +13,3 @@ ALTER DATABASE studyDB READ ONLY = 0;
 --ALTER : modify things in specified data and value
 --READ ONLY : transform the dabase/table in a read only mode, impossibiling editing the values
 -- if READ ONLY equals to 0 it's disable, if 1 it's able
-
-
-/*
-To active the mysql use this command:
-docker start mysql-test
-*/
