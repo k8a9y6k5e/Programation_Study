@@ -36,7 +36,7 @@ Files where I try to *apply the things I learn in complete programs*.
 #### programming projects using APIs model
 
 - [x] Stock_API - API of a stock control application, first project with API routes and multiple code files
-
+- [x] Auth-API - Simple API to study about the fluxe and use of jwt and autentication; 
 ---
 
 ## *study_application*
